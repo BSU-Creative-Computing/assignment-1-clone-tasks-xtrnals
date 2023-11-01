@@ -1,23 +1,28 @@
+//Declaring Variables
 $circleRadii: 70px, 80px, 90px, 100px;
 $colors: #4e89ae, #43658b, #ed6663, #ffa372;
 
+// Applies auto margin and a background color for the whole document
 *{
     margin: auto;
     background-color: #E2EFF1;
 }
 
+// Mixin to handle centering of elements
 @mixin center {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+// Mixin that handles media queries
 @mixin media($breakpoint) {
     @media (max-width: $breakpoint) {
         @content;
     }
 }
 
+//Styles the header and adds media query for the placeholder image depending on the resolution
 .header {
     background-color: #8ccff7;
     text-align: center;
@@ -40,6 +45,7 @@ $colors: #4e89ae, #43658b, #ed6663, #ffa372;
     }
 }
 
+// Adds the color and hover to the rows
 .row-section .row {
     display: inline-block;
     @include center;
@@ -67,8 +73,7 @@ $colors: #4e89ae, #43658b, #ed6663, #ffa372;
     }
 }
 
-
-    
+// Adds the colors and ghover as well as other stylings for the circles    
 .circle {
     background-color: nth($colors, 1);
     height: 100px;
@@ -106,7 +111,7 @@ $colors: #4e89ae, #43658b, #ed6663, #ffa372;
     }
 }
 
-
+// Media query for the circles depending on the resolution
 .circle-section {
     @include center;
     display: flex;
@@ -123,6 +128,7 @@ $colors: #4e89ae, #43658b, #ed6663, #ffa372;
     }
 }
 
+// Styling for the footer
 .footer {
     background-color: #8ccff7;
     height: 50px;
