@@ -1,0 +1,114 @@
+* {
+  margin: auto;
+  background-color: #E2EFF1;
+}
+
+.header {
+  background-color: #8ccff7;
+  text-align: center;
+  margin-bottom: 25px;
+}
+.header img {
+  max-width: 100%;
+}
+@media (max-width: 801px) {
+  .header img {
+    content: url("https://via.placeholder.com/300");
+  }
+}
+@media (max-width: 480px) {
+  .header img {
+    content: url("https://via.placeholder.com/200");
+  }
+}
+
+.row-section .row {
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+}
+.row-section .row:nth-child(1) {
+  background-color: #4e89ae;
+  color: #4e89ae;
+}
+.row-section .row:nth-child(2) {
+  background-color: #43658b;
+  color: #43658b;
+}
+.row-section .row:nth-child(3) {
+  background-color: #ed6663;
+  color: #ed6663;
+}
+.row-section .row:nth-child(4) {
+  background-color: #ffa372;
+  color: #ffa372;
+}
+.row-section .row:hover {
+  background-color: #444;
+  color: #444;
+}
+
+.circle {
+  background-color: #4e89ae;
+  height: 100px;
+  width: 100px;
+  border-radius: 100px;
+  margin: 5px;
+}
+.circle:nth-child(1) {
+  background-color: #4e89ae;
+  border-radius: 70px;
+  width: 70px;
+  height: 70px;
+}
+.circle:nth-child(2) {
+  background-color: #43658b;
+  border-radius: 80px;
+  width: 80px;
+  height: 80px;
+}
+.circle:nth-child(3) {
+  background-color: #ed6663;
+  border-radius: 90px;
+  width: 90px;
+  height: 90px;
+}
+.circle:nth-child(4) {
+  background-color: #ffa372;
+  border-radius: 100px;
+  width: 100px;
+  height: 100px;
+}
+.circle:hover {
+  background-color: #444;
+}
+
+.circle-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+@media (max-width: 621px) {
+  .circle-section {
+    flex-direction: column;
+    margin: auto;
+  }
+}
+@media (max-width: 0px) {
+  .circle-section {
+    flex-direction: column;
+    margin: auto;
+  }
+}
+
+.footer {
+  background-color: #8ccff7;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}/*# sourceMappingURL=Clone Task 3.css.map */

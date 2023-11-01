@@ -1,0 +1,132 @@
+$circleRadii: 70px, 80px, 90px, 100px;
+$colors: #4e89ae, #43658b, #ed6663, #ffa372;
+
+*{
+    margin: auto;
+    background-color: #E2EFF1;
+}
+
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin media($breakpoint) {
+    @media (max-width: $breakpoint) {
+        @content;
+    }
+}
+
+.header {
+    background-color: #8ccff7;
+    text-align: center;
+    margin-bottom: 25px;
+
+    img {
+        max-width: 100%;
+    }
+
+    @include media(801px) {
+        img {
+            content: url("https://via.placeholder.com/300");
+        }
+    }
+
+    @include media(480px) {
+        img {
+            content: url("https://via.placeholder.com/200");
+        }
+    }
+}
+
+.row-section .row {
+    display: inline-block;
+    @include center;
+    height: 40px;
+    
+    &:nth-child(1) {
+        background-color: nth($colors, 1);
+        color: nth($colors, 1);
+    }
+    &:nth-child(2) {
+        background-color: nth($colors, 2);
+        color: nth($colors, 2);
+    }
+    &:nth-child(3) {
+        background-color: nth($colors, 3);
+        color: nth($colors, 3);
+    }
+    &:nth-child(4) {
+        background-color: nth($colors, 4);
+        color: nth($colors, 4);
+    }
+    &:hover {
+        background-color: #444;
+        color: #444;
+    }
+}
+
+
+    
+.circle {
+    background-color: nth($colors, 1);
+    height: 100px;
+    width: 100px;
+    border-radius: 100px;
+    margin: 5px;
+
+    &:nth-child(1) {
+        background-color: nth($colors, 1);
+        border-radius: nth($circleRadii, 1);
+        width: nth($circleRadii, 1);
+        height: nth($circleRadii, 1);
+    }
+    &:nth-child(2) {
+        background-color: nth($colors, 2);
+        border-radius: nth($circleRadii, 2);
+        width: nth($circleRadii, 2);
+        height: nth($circleRadii, 2);
+    }
+    &:nth-child(3) {
+        background-color: nth($colors, 3);
+        border-radius: nth($circleRadii, 3);
+        width: nth($circleRadii, 3);
+        height: nth($circleRadii, 3);
+    }
+    &:nth-child(4) {
+        background-color: nth($colors, 4);
+        border-radius: nth($circleRadii, 4);
+        width: nth($circleRadii, 4);
+        height: nth($circleRadii, 4);
+    }
+
+    &:hover {
+        background-color: #444;
+    }
+}
+
+
+.circle-section {
+    @include center;
+    display: flex;
+    flex-direction: row;
+
+    @include media(621px) {
+        flex-direction: column;
+        margin: auto;
+    }  
+    
+    @include media(0px) {
+        flex-direction: column;
+        margin: auto;
+    }
+}
+
+.footer {
+    background-color: #8ccff7;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
