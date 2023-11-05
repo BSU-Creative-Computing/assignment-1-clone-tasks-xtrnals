@@ -1,3 +1,4 @@
+/* Global styling for the entire page */
 body {
     font-family: monospace;
     margin: 0 auto;
@@ -5,17 +6,20 @@ body {
     background-color: #f6f6f7;
 }
 
+/* Styling for the header section */
 header {
     background-color: white;
 }
 
-section img{
+/* Styling for images inside sections */
+section img {
     max-width: 100%;
     height: auto;
     display: block;
     background-color: white;
-  }
+}
 
+/* Media queries for responsive design */
 @media (max-width: 480px) {
     section {
         width: 100%;
@@ -23,37 +27,40 @@ section img{
     }
 }
 
-@media (min-width: 481px) and (max-width:800px) {
+@media (min-width: 481px) and (max-width: 800px) {
     section {
         width: 50%;
         float: left;
     }
 }
 
-@media (min-width: 801px) and (max-width:1024px) {
+@media (min-width: 801px) and (max-width: 1024px) {
     section {
         width: 33.3%;
         float: left;
     }
 }
 
-@media (min-width:1025px) {
+@media (min-width: 1025px) {
     section {
         width: 33.3%;
         float: left;
     }
 }
 
+/* Styling for the text article */
 .text {
     text-align: left;
     background-color: white;
 }
 
+/* Styling for paragraphs within the text article */
 p {
     padding: 10px;
     margin: 0;
 }
 
+/* Styling for the footer section */
 .footer {
     width: 100%;
     text-align: center;
@@ -65,4 +72,3 @@ p {
     background-color: rgb(36, 35, 35);
     color: #fff;
 }
-
