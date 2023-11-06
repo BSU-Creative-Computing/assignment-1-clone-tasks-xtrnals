@@ -1,12 +1,20 @@
-*{
-    margin: 0;
-    padding: 0;
-}
-
+/* Global styling for the header section */
 .header {
     font-family: Helvetica;
+    display: flex;
+    height: 79px;
+    width: 100%;
 }
 
+/* Global styling for the entire page */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+}
+
+/* Styling for icon elements */
 .icon {
     display: flex;
     align-items: center;
@@ -15,9 +23,10 @@
     color: white;
 }
 
+/* Styling for the navigation bar */
 nav {
-    background-color: rgb(32,148,252);
-    display: flex;  
+    background-color: rgb(32, 148, 252);
+    display: flex;
     width: 100%;
     height: 70px;
     position: relative;
@@ -27,16 +36,19 @@ nav {
     box-sizing: border-box;
 }
 
+/* Styling for the navigation list */
 nav ol {
     display: flex;
     list-style: none;
     margin: auto 0;
 }
 
+/* Styling for navigation list items */
 nav ol li {
     margin-right: 0 2px;
 }
 
+/* Styling for navigation links */
 nav ol li a {
     color: #fff;
     font-size: 15px;
@@ -45,93 +57,187 @@ nav ol li a {
     padding: 5px 10px;
 }
 
-nav .icon {
-    font-size: 25px;
-    color: #fff;
-    font-weight: 600;
-    cursor: pointer;
-}
-
+/* Styling for search box */
 .search_box {
     display: flex;
     align-items: center;
-    margin: 0 auto; 
+    margin: 0 auto;
     width: 20%;
 }
 
+/* Styling for search input */
 .search_box input[type="search"] {
-    width: 100%; 
-    padding: 10px; 
-    font-size: 16px; 
-    border: 2px solid #ccc; 
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
 }
 
+/* Styling for the main content section */
 .main {
     background-color: #fff;
+    display: flex;
 }
 
+/* Styling for the content container */
 .content {
     padding-top: 25px;
-    max-width: 70%;
-    height: 200%;
-    margin: 0 auto;
+    height: 100%;
+    margin: auto;
     flex-wrap: nowrap;
     display: flex;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
-}   
+}
 
+/* Styling for the "avengers" section */
 .avengers {
     display: flex;
     flex-direction: column;
     box-shadow: 1px 5px 5px grey;
-    width: 557px;
+    width: 712px;
+    height: 100%;
     float: left;
 }
 
+/* Styling for "avgimg" elements */
 .avgimg {
     margin: 1px;
+    background-color: white;
 }
 
+/* Styling for text within the "avengers" section */
 .text {
     padding: 15px;
     padding-top: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
 }
 
-.lone_and_predators {
+/* Styling for movie images with class "img" */
+.img {
+    max-width: 100%;
+    margin: 16px;
+    color: white;
+}
+
+/* Styling for individual movie sections */
+.movies {
     box-shadow: 1px 5px 5px grey;
     display: flex;
     flex-direction: column;
-    height: 685px;
     width: 243px;
     margin-left: 10px;
+    background-color: white;
 }
 
-.rage_and_millenium {
-    box-shadow: 1px 5px 5px grey;
-    display: flex;
-    flex-direction: column;
-    height: 685px;
-    width: 243px;
-    margin-left: 10px;
+/* Styling for the last movie section */
+.movies:last-child {
+    justify-content: flex-end;
 }
 
+/* Styling for columns */
 .col {
     display: flex;
-    flex-wrap: wrap;
+    width: 100%;
 }
 
+/* Styling for buttons */
 .button {
-    float: right;
+    justify-content: flex-end;
+    align-self: flex-end;
     background-color: #1B98FF;
     color: white;
     padding: 10px;
     margin: 26px;
     border-radius: 5px 5px 5px 5px;
     width: 93px;
-    text-align: center;
-    cursor: pointer;
+    border: none;
 }
 
+/* Media queries for responsive design */
+@media (min-width: 801px) and (max-width: 1024px) {
+    .col {
+        flex-direction: column;
+    }
+}
 
+@media (min-width: 481px) and (max-width: 800px) {
+    .content {
+        flex-direction: column;
+    }
 
+    .movies {
+        width: auto;
+        margin: 0;
+    }
 
+    .col {
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .films1, .films2 {
+        max-width: 356px;
+    }
+
+    .avengers {
+        margin: auto;
+        margin-bottom: 20px;
+        max-width: 700px;
+    }
+
+    .search {
+        display: none;
+    }
+
+    .list {
+        justify-content: flex-end;
+        align-self: center;
+    }
+
+    .header {
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 480px) {
+    .search {
+        display: none;
+    }
+
+    .content {
+        display: inline;
+        flex-direction: row;
+        max-width: 356px;
+    }
+
+    .movies {
+        width: auto;
+        margin: 0;
+    }
+
+    .col {
+        margin: 0 auto;
+        width: 100%;
+        display: inline-block;
+    }
+
+    .films1, .films2 {
+        max-width: 356px;
+        margin: auto;
+    }
+
+    .avengers {
+        margin: auto;
+        width: 356px;
+        float: none;
+    }
+
+    .avgimg {
+        margin: 0;
+    }
+
+    .header {
+        justify-content: space-between;
+    }
+}
